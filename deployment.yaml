@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loco-deployment
+  namespace: loco-application
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: loco-app
+  template:
+    metadata:
+      labels:
+        app: loco-app
+    spec:
+      containers:
+      - name: loco-container
+        image: anassalagar/loco-image-app:latest
+        ports:
+        - containerPort: 80
