@@ -29,7 +29,7 @@ WORKDIR /app
 COPY --from=build /app/build ./build
 
 # Expose the port the app runs on
-EXPOSE 80
+EXPOSE 3000
 
 # Start the server and serve the built application
-CMD ["serve", "-s", "build", "-l", "80"]
+CMD ["serve", "-s", "build", "-l", "3000"]
