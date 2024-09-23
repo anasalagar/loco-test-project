@@ -17,4 +17,5 @@ spec:
       - name: loco-container
         image: anassalagar/loco-image-app:latest
         ports:
-        - containerPort: 80
+        - containerPort: 3000
+      
